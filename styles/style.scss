@@ -1,0 +1,1355 @@
+$Poppins: 'Poppins', sans-serif;
+$darkGreen: #58A9A5;
+$lightGreen: #CCF0E6;
+$titleColor: #1C2323;
+$textColor: #404242;
+$textColorGreen: #486958;
+@mixin Button{
+    width: 198px;
+    height: 55px;
+    background-color: $darkGreen;
+    color: white;
+    font-size: 18px;
+    margin-top: 38px;
+    border: none;
+    border-radius: 15px;
+    border-bottom-left-radius: 1px;
+    font-family: $Poppins;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+@mixin buttonHover{
+    background-color: white;
+    color: $darkGreen;
+    border: 2px solid $darkGreen;
+    transition: 0.3s;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h2{
+    font-size: 51px;
+    font-family: $Poppins;
+    color: $titleColor;
+    font-weight: 800;
+}
+.burger{
+    display: none;
+}
+.display__nonetext, .displayNoneCard{
+    display: none;
+}
+.wrap{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    .container{
+        width: 1180px;
+        min-height: 100vh;
+        .firstPage{
+            width: 100%;
+            height: auto;
+            padding: 0 0 40px 0;
+            padding-left: 15px;
+            header{
+                width: 100%;
+                height: 175px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .logo{
+                    width: auto;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    font-family: $Poppins;
+                    font-size: 26px;
+                    color: $darkGreen;
+                    font-weight: 800;
+                    img{
+                        height: 40px;
+                        margin-right: 6px;
+                    }
+                }
+                .servises{
+                    width: auto;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    font-size: 18px;
+                    font-weight: 400;
+                    div{
+                        display: flex;
+                        font-family: $Poppins;
+                        padding-left: 65px;
+                        padding-top: 30px;
+                        a{
+                            text-decoration: none;
+                            text-align: center;
+                            list-style: none;
+                                margin: 0 31.5px;
+                                color: $textColor;
+                            img{
+                                width: 35px;
+                                height: 4px;
+                                position: relative;
+                                bottom: 15px;
+                            }
+                            .Servises__home-li{
+                                color: $darkGreen;
+                                font-weight: 700;
+                                list-style: none;
+                            }
+                        }
+                    }
+                }
+                .signUp{
+                    width: 195px;
+                    height: 58px;
+                    background-color: $darkGreen;
+                    color: white;
+                    font-size: 18px;
+                    font-family: $Poppins;
+                    font-weight: 500;
+                    border: none;
+                    border-radius: 10px;
+                    margin-top: 4px;
+                    cursor: pointer;
+                    transition: 0.3s;
+                }
+                .signUp:hover{
+                    @include buttonHover;
+                }
+            }
+            main{
+                width: 100%;
+                display: flex;
+                .main__left{
+                    width: 50%;
+                    h2{
+                        margin: 54px 0 38px 0;
+                        width: 500px;
+                        line-height: 75px;
+                    }
+                    p{
+                        margin-top: 20px;
+                        font-size: 22px;
+                        font-family: $Poppins;
+                        color: $textColor;
+                        width: 540px;
+                        line-height: 32px;
+                    }
+                    .LetsGo-btn{
+                        @include Button;
+                    }
+                    .LetsGo-btn:hover{
+                        @include buttonHover;
+                    }
+                }
+                .main__right{
+                    width: 50%;
+                    height: auto;
+                    img{
+                        width: 600px;
+                        margin-top: 20px;
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+        .secondPage{
+            width: 100%;
+            height: auto;
+            padding: 40px 0;
+            .main{
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                p{
+                    text-align: center;
+                    font-family: $Poppins;
+                    color: $textColor;
+                    font-size: 21px;
+                    font-weight: 400;
+                    margin-top: 15px;
+                    letter-spacing: 0.2px;
+                }
+                .main__top{
+                    width: 100%;
+                    height: auto;
+                    padding-left: 15px;
+                    padding-top: 55px;
+                    display: flex;
+                    .designImage{
+                        width: 66%;
+                        height: 250px;
+                        background-image: url(../img/desineImg.png);
+                        background-size: cover;
+                        border-bottom-left-radius: 8px;
+                        border-top-left-radius: 8px;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        .playButton-shaddow{
+                            width: 90px;
+                            height: 90px;
+                            background-color: rgba(255,255,255, .4);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 50%;
+                            cursor: pointer;
+                            position: relative;
+                            left: 47px;
+                            margin-top: 100px;
+                            .playButton{
+                                width: 70px;
+                                height: 70px;
+                                background-color: white;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                border-radius: 50%;
+                                img{
+                                    width: 25%;
+                                    margin-left: 5px;
+                                }
+                            }
+                        }
+                    }
+                    .desineText{
+                        width: 34%;
+                        height: 250px;
+                        background-color: #CCF0E6;
+                        border-top-right-radius: 8px;
+                        border-bottom-right-radius: 8px;
+                        padding-top: 33px;
+                        line-height: 22px;
+                        padding-left: 83px;
+                        p:nth-child(1){
+                            font-size: 14px;
+                            font-weight: 500;
+                            width: 250px;
+                            color: $textColorGreen;
+                            font-family: $Poppins;
+                            text-align: start;
+                        }
+                        p:nth-child(2){
+                            font-size: 14px;
+                            font-weight: 700;
+                            color: $textColorGreen;
+                            font-family: $Poppins;
+                            text-align: start;
+                            margin-top: 28px;
+                        }
+                    }
+                }
+                .mainBottom{
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    padding-left: 15px;
+                    margin-top: 110px;
+                    .mainBottom__left{
+                        width: 49%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: flex-start;
+                        img{
+                            width: 82%;
+                        }
+                    }
+                    .mainBottom__right{
+                        width: 51%;
+                        height: 100%;
+                        h3{
+                            font-family: $Poppins;
+                            color: $titleColor;
+                            font-weight: 700;
+                            font-size: 28px;
+                            letter-spacing: 0.3px;
+                            text-align: start;
+                        }
+                        p{
+                            text-align: start;
+                            margin-top: 39px;
+                            font-weight: 500;
+                            line-height: 32px;
+                            color: $textColorGreen;
+                        }
+                    }
+                }
+            }
+        }
+        .thirdPage{
+            width: 100%;
+            height: auto;
+            padding: 40px 0px;
+            h2{
+                text-align: center;
+            }
+            p{
+                font-weight: 500;
+                line-height: 32px;
+                font-size: 22px;
+                margin-top: 14px;
+                color: $textColor;
+                text-align: center;
+                font-family: $Poppins;
+            }
+            .lines-block{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                height: 15px;
+                width: 100%;
+                margin-top: 34px;
+                .Lines-block__line{
+                    width: 100px;
+                    height: 4px;
+                    border-radius: 20px;
+                    background-color: $darkGreen;
+                    margin-left: 15px;
+                }
+            }
+            .main{
+                width: auto;
+                height: auto;
+                display: flex;
+                padding-left: 15px;
+                margin-top: 67px;
+                .projectsCard{
+                    width: auto;
+                    height: auto;
+                    h3{
+                        color: $darkGreen;
+                        font-family: $Poppins;
+                        font-size: 28px;
+                        font-weight: 700;
+                        letter-spacing: 0.6px;
+                    }
+                    p{
+                        text-align: start;
+                        font-weight: 500;
+                        color: $textColorGreen;
+                        font-size: 14px;
+                        margin-top: 3px;
+                        line-height: 22px;
+                        letter-spacing: 0.2px;
+                    }
+                    img{
+                        width: 327px;
+                        margin-top: 25px;
+                    }
+                }
+                .projectsCard2{
+                    margin: -28px 95px 0px 88px;
+                    h3{
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+        .fourthPage{
+            width: 100%;
+            height: auto;
+            padding: 50px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h2{
+                text-align: center;
+                margin-top: 82px;
+            }
+            .main{
+                width: 890px;
+                margin-top: 16.5px;
+                height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                img{
+                    height: 50px;
+                }
+                img:nth-child(2){
+                    width: 165.9px;
+                    height: 63px;
+                }
+                img:nth-child(1){
+                    width: 167px;
+                    height: 167px;
+                }
+                img:nth-child(3){
+                    width: 207.2px;
+                    height: 30.8px;
+                }
+                img:nth-child(4){
+                    width: 140px;
+                    height: 91.7px;
+                }
+            }
+            .achievementCard{
+                width: 100%;
+                height: 503px;
+                padding-left: 15px;
+                margin-top: 48px;
+                display: flex;
+                .achievementCard__image{
+                    width: 38.2%;
+                    height: 100%;
+                    background-image: url(../img/TestimonialImage.png);
+                    background-size: cover;
+                    background-position: center;
+                }
+                .achievementCard__right{
+                    width: 61.8%;
+                    height: 100%;
+                    background-color: $lightGreen;
+                    padding-left: 100px;
+                    .achievementCard__statistic{
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        padding-top: 38px;
+                        .achievementCard__statistic-centerbox{
+                            margin: 0 87px;
+                        }
+                        h3{
+                            font-size: 48px;
+                            font-weight: 800;
+                            color: $darkGreen;
+                            font-family: $Poppins;
+                        }
+                        p{
+                            font-size: 22px;
+                            font-weight: 500;
+                            color: $darkGreen;
+                            font-family: $Poppins;
+                            margin-top: -10px;
+                        }
+                    }
+                    .achievementCard__text{
+                        width: auto;
+                        height: auto;
+                        img{
+                            width: 70px;
+                            position: relative;
+                            top: 50px;
+                            right: 30px;
+                            z-index: 1;
+                        }
+                        p{
+                            font-size: 18px;
+                            font-weight: 500;
+                            width: 570px;
+                            font-family: $Poppins;
+                            color: $textColorGreen;
+                            margin-top: 28px;
+                            z-index: 2;
+                            position: relative;
+                        }
+                        h6{
+                            font-size: 17px;
+                            font-style: italic;
+                            font-family: $Poppins;
+                            color: $darkGreen;
+                            margin-top: 27px;
+                            letter-spacing: 0.3px;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+        .fifthPage{
+            width: 100%;
+            height: auto;
+            padding: 100px 0;
+            .main{
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: space-between;
+                padding-left: 15px;
+                .main__left{
+                    width: auto;
+                    height: auto;
+                    padding-top: 23px;
+                    p{
+                        font-size: 18px;
+                        font-family: $Poppins;
+                        font-weight: 500;
+                        color: $textColorGreen;
+                        margin-top: 6px;
+                    }
+                    .lines-block{
+                        width: auto;
+                        height: 15px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        margin-top: 25px;
+                        .Lines-block__line{
+                            width: 100px;
+                            height: 4px;
+                            background-color: $darkGreen;
+                            border-radius: 20px;
+                        }
+                    }
+                }
+                .main__right{
+                    width: auto;
+                    height: auto;
+                    padding-top: 23px;
+                    .sendMessage{
+                        width: 800px;
+                        height: 325px;
+                        border: 1px solid $textColorGreen;
+                        padding: 10px 38px 0 38px;
+                        input{
+                            width: 100%;
+                            height: 75px;
+                            outline: none;
+                            border: none;
+                            border-bottom: 1px solid black;
+                            font-size: 18px;
+                            font-family: $Poppins;
+                            font-weight: 500;
+                            color: $textColorGreen;
+                        }
+                        input:nth-child(1){
+                            padding-top: 12px;
+                        }
+                        input:nth-child(2){
+                            padding-top: 25px;
+                            height: 90px;
+                        }
+                        input:nth-child(3){
+                            border: none;
+                            height: 55px;
+                            padding-top: 20px;
+                        }
+                        .send__button-block{
+                            width: 100%;
+                            height: auto;
+                            margin-top: 12px;
+                            display: flex;
+                            justify-content: flex-end;
+                            .send__button{
+                                @include Button;
+                                margin-top: 0;
+                            }
+                            .send__button:hover{
+                                @include buttonHover;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:1540px){
+    // first Page start 
+    .wrap .container{
+        width: 1000px;
+    }
+    .wrap .container .firstPage{
+        padding-left: 0;
+    }
+    .wrap .container .firstPage header{
+        height: 125px;
+    }
+    .wrap .container .firstPage header .servises div{
+        padding-left: 0;
+    }
+    .wrap .container .firstPage main .main__left h2{
+        font-size: 41px;
+        line-height: 55px;
+        width: 440px;
+    }
+    .wrap .container .firstPage main .main__left p{
+        font-size: 18px;
+        line-height: 26px;
+        width: 441px;
+    }
+    .wrap .container .firstPage main .main__right{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .wrap .container .firstPage main .main__right img{
+        width: 500px;
+    }
+    h2{
+        font-size: 41px;
+    }
+    .wrap .container .secondPage .main p{
+        font-size: 18px;
+    }
+    // first page end
+    // second page
+    .wrap .container .secondPage .main .main__top .desineText{
+        padding-left: 63px;
+    }
+    .wrap .container .secondPage .main .main__top{
+        padding-left: 0px;
+    }
+    .wrap .container .secondPage .main .main__top .designImage{
+        background-position: center;
+    }
+    .wrap .container .secondPage .main .mainBottom{
+        padding-left: 0px;
+    }
+    //second page
+    // third page 
+    .wrap .container .thirdPage p{
+        font-size: 18px;
+    }
+    .wrap .container .thirdPage .lines-block .Lines-block__line{
+        margin-left: 0px;
+    }
+    .wrap .container .thirdPage .main{
+        padding-left: 0px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .wrap .container .thirdPage .main .projectsCard2{
+        margin: 0px;
+    }
+    .wrap .container .thirdPage .main .projectsCard p{
+        font-size: 13px;
+        width: 100%;
+        line-height: 20px;
+        letter-spacing: 0px;
+    }
+    .wrap .container .thirdPage .main .projectsCard{
+        width: 300px;
+    }
+    .wrap .container .thirdPage .main .projectsCard h3{
+        font-size: 24px;
+        letter-spacing: 0px;
+    }
+    .wrap .container .thirdPage .main .projectsCard img{
+        width: 100%;
+    }
+    // third page 
+    //fourth page
+    .wrap .container .fourthPage .achievementCard{
+        padding-left: 0;
+        height: 450px;
+    }
+    .wrap .container .fourthPage .achievementCard .achievementCard__right{
+        padding-left: 80px;
+    }
+    .wrap .container .fourthPage .achievementCard .achievementCard__right .achievementCard__text p{
+        font-size: 16px;
+        width: 480px;
+    }
+    .wrap .container .fourthPage .achievementCard .achievementCard__right .achievementCard__text h6{
+        font-size: 15px;
+        margin-top: 15px;
+    }
+    .wrap .container .fourthPage .achievementCard .achievementCard__right .achievementCard__statistic h3{
+        font-size: 40px;
+    }
+    .wrap .container .fourthPage .achievementCard .achievementCard__right .achievementCard__statistic .achievementCard__statistic-centerbox{
+        margin: 0 60px;
+    }
+    .wrap .container .fourthPage .achievementCard .achievementCard__right .achievementCard__statistic p{
+        font-size: 18px;
+    }
+    // fourth page
+    //fifth page
+    .wrap .container .fifthPage .main .main__right .sendMessage{
+        width: 615px;
+    } 
+    .wrap .container .fifthPage .main{
+        padding: 0;
+    }
+    //fifth page
+}
+@media screen and (max-width:1100px){
+    // first page start 
+    .wrap .container .firstPage header .servises div a{
+        margin: 0 20px;
+    }
+    .wrap .container{
+        width: 900px;
+    }
+    .wrap .container .firstPage main .main__right img{
+        width: 445px;
+    }
+    .wrap .container .firstPage main .main__left h2{
+        font-size: 31px;
+        line-height: 40px;
+        width: 300px;
+    }
+    .wrap .container .firstPage main .main__left p{
+        font-size: 16px;
+        width: 392px;
+        margin-top: -5px;
+    }
+    h2{
+        font-size: 31px;
+    }
+    // first page end 
+    //second page
+    .wrap .container .secondPage .main .main__top .desineText p:nth-child(1){
+        width: 208px;
+    }
+    .wrap .container .secondPage .main .mainBottom .mainBottom__right h3{
+        font-size: 26px;
+        line-height: 36px;
+    }
+    .wrap .container .secondPage .main .mainBottom .mainBottom__right p{
+        margin-top: 28px;
+        font-size: 16px;
+        line-height: 26px;
+    }
+    //second page
+    // third page
+    .projectsCard2{
+        display: none;
+    }
+    .displayNoneCard{
+        display: block;
+    }
+    .wrap .container .thirdPage .main{
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .wrap .container .thirdPage .main .projectsCard{
+        margin: 20px 15px 0px 15px;
+    }
+    .wrap .container .thirdPage .main .projectsCard h3{
+        text-align: center;
+    }
+    .wrap .container .thirdPage .main .projectsCard p{
+        text-align: center;
+    } 
+    //third page
+    // fourth page
+    .wrap .container .fourthPage .main img:nth-child(1){
+        width: 133.6px;
+        height: 133.6px;
+    }
+    .wrap .container .fourthPage .main img:nth-child(2){
+        width: 132.72px;
+        height: 50.4px;
+    }
+    .wrap .container .fourthPage .main img:nth-child(3){
+        width: 165.76px;
+        height: 24.64px;
+    }
+    .wrap .container .fourthPage .main img:nth-child(4){
+        width: 112px;
+        height: 73.36px;
+    }
+    .wrap .container .fourthPage .main{
+        width: 685px;
+    }
+    .wrap .container .fourthPage h2{
+        margin-top: 40px;
+    }
+    .wrap .container .fourthPage .achievementCard{
+        height: 400px;
+    }
+    .wrap .container .fourthPage .achievementCard .achievementCard__right{
+        padding-left: 55px;
+    }
+    .wrap .container .fourthPage .achievementCard .achievementCard__right .achievementCard__text p{
+        font-size: 15px;
+        width: 450px;
+    }
+    .wrap .container .fourthPage .achievementCard .achievementCard__right .achievementCard__text img{
+        width: 50px;
+        right: 20px;
+    }
+    .wrap .container .fourthPage .achievementCard .achievementCard__right .achievementCard__text h6{
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    // fourth page
+    //fifth page
+    .wrap .container .fifthPage .main .main__right .sendMessage{
+        width: 520px;
+    } 
+    .wrap .container .fifthPage{
+        padding: 80px 0 100px 0;
+    }
+    //fifth page
+}
+@media screen and (max-width:980px){
+    // first Page start 
+    .wrap .container .firstPage header .servises{
+        font-size: 16px;
+    }
+    .wrap .container .firstPage header .signUp{
+        font-size: 16px;
+        width: 155px;
+        height: 50px;
+    }
+    .wrap .container{
+        width: 800px;
+    }
+    .wrap .container .firstPage header{
+        height: 100px;
+    }
+    .wrap .container .firstPage main .main__left p{
+        font-size: 14px;
+        width: 343px;
+        margin-top: -20px;
+        line-height: 23px;
+    }
+    .wrap .container .firstPage main .main__right img{
+        width: 400px;
+    }
+    .wrap .container .firstPage main .main__left .LetsGo-btn{
+        margin-top: 30px;
+        width: 160px;
+        height: 50px;
+        font-size: 16px;
+    }
+    // first page end
+    // second page
+    .wrap .container .secondPage .main .main__top .desineText{
+        width: 38%;
+        padding-left: 52px;
+    } 
+    .wrap .container .secondPage .main .main__top .designImage .playButton-shaddow{
+        width: 80px;
+        height: 80px;
+        left: 42px;
+    }
+    .wrap .container .secondPage .main .main__top .designImage .playButton-shaddow .playButton{
+        width: 65px;
+        height: 65px;
+    }
+    //second page
+    // fourth page
+    .wrap .container .fourthPage h2{
+        margin-top: 20px;
+    }
+    .wrap .container .fourthPage .achievementCard{
+        height: 360px;
+    }
+    .wrap .container .fourthPage .achievementCard .achievementCard__right{
+        padding-left: 40px;
+    }
+    .wrap .container .fourthPage .achievementCard .achievementCard__right .achievementCard__text p{
+        font-size: 14px;
+        width: 420px;
+        margin-top: 10px;
+    }
+    .wrap .container .fourthPage .achievementCard .achievementCard__right .achievementCard__text h6{
+        font-size: 13px;
+        margin-top: 10px;
+    }
+    .wrap .container .fourthPage .achievementCard .achievementCard__right .achievementCard__text img{
+        top: 30px;
+    }
+    .wrap .container .fourthPage .achievementCard .achievementCard__right .achievementCard__statistic h3{
+        font-size: 32px;
+    }
+    .wrap .container .fourthPage .achievementCard .achievementCard__right .achievementCard__statistic .achievementCard__statistic-centerbox{
+        margin: 0 50px;
+    }
+    .wrap .container .fourthPage .achievementCard .achievementCard__right .achievementCard__statistic p{
+        font-size: 16px;
+    }
+    // fourth page
+    //fifth page
+    .wrap .container .fifthPage .main .main__right .sendMessage{
+        width: 470px;
+        height: 290px;
+        padding: 0 25px;
+    } 
+    .wrap .container .fifthPage .main .main__left p{
+        font-size: 16px;
+    }
+    .wrap .container .fifthPage .main .main__right .sendMessage input:nth-child(2){
+        padding-top: 5px;
+        height: 70px;
+    }
+    .wrap .container .fifthPage .main .main__right .sendMessage input:nth-child(1){
+        height: 70px;
+    }
+    .wrap .container .fifthPage .main .main__right .sendMessage input:nth-child(3){
+        padding-top: 10px;
+        height: 70px;
+    }
+    .wrap .container .fifthPage .main .main__right .sendMessage .send__button-block .send__button{
+        width: 155px;
+        height: 50px;
+    }
+    .wrap .container .fifthPage{
+        padding: 40px 0 80px 0;
+    }
+    //fifth page
+}
+@media screen and (max-width:870px){
+    //first page start
+    .wrap .container{
+        width: 700px;
+    }
+    .wrap .container .firstPage main .main__right img{
+        width: 350px;
+    }
+    .wrap .container .firstPage main .main__left h2{
+        font-size: 26px;
+        line-height: 34px;
+        width: 275px;
+    }
+    h2{
+        font-size: 26px;
+    }
+    .wrap .container .firstPage main .main__left p{
+        font-size: 13px;
+        width: 319px;
+    }
+    .wrap .container .firstPage header .servises div a{
+        margin: 0 12px;
+    }
+    .wrap .container .firstPage header .servises{
+        font-size: 14px;
+    }
+    .wrap .container .firstPage header .servises div a img{
+        bottom: 10px;
+    }
+    // first page end 
+    //second page
+    .wrap .container .secondPage .main .main__top .desineText{
+        width: 48%;
+    }
+    .wrap .container .secondPage .main p{
+        font-size: 16px;
+    }
+    .wrap .container .secondPage .main .mainBottom .mainBottom__right h3{
+        font-size: 22px;
+        line-height: 30px;
+    }
+    .wrap .container .secondPage .main .mainBottom .mainBottom__right p{
+        margin-top: 22px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    //secind page
+    // fourth page 
+    .wrap .container .fourthPage .achievementCard{
+        height: 300px;
+    }
+    .wrap .container .fourthPage .achievementCard .achievementCard__right .achievementCard__text p{
+        font-size: 14px;
+        width: 370px;
+        margin-top: 0px;
+    }
+    .wrap .container .fourthPage .achievementCard .achievementCard__right .achievementCard__text h6{
+        font-size: 13px;
+        margin-top: 10px;
+    }
+    .wrap .container .fourthPage .achievementCard .achievementCard__right .achievementCard__text img{
+        top: 20px;
+    }
+    .wrap .container .fourthPage .achievementCard .achievementCard__right .achievementCard__statistic{
+        padding-top: 20px;
+    }
+    .wrap .container .fourthPage .achievementCard .achievementCard__right .achievementCard__statistic .achievementCard__statistic-centerbox{
+        margin: 0 50px;
+    }
+    // fourth page 
+    //fifth page
+    .wrap .container .fifthPage .main{
+        flex-direction: column;
+        align-items: center;
+    }
+    .wrap .container .fifthPage h2{
+        text-align: center;
+    }
+    .wrap .container .fifthPage .main .main__left p{
+        text-align: center;
+        font-size: 14px;
+    }
+    .wrap .container .fifthPage .main .main__left .lines-block{
+        align-items: center;
+    }
+    .wrap .container .fifthPage .main .main__right{
+        width: 100%;
+    }
+    .wrap .container .fifthPage .main .main__right .sendMessage{
+        width: 100%;
+    }
+    .wrap .container .fifthPage .main .main__right .sendMessage input{
+        font-size: 15px;
+    }
+    .wrap .container .fifthPage{
+        padding: 20px 0 60px 0;
+    }
+    //fifth page
+}
+@media screen and (max-width:770px){
+    // first page start 
+    .wrap .container{
+        width: 100%;
+    }
+    .wrap .container .firstPage{
+        padding: 0 20px;
+    }
+    .wrap .container .firstPage header .servises{
+        display: none;
+    }
+    .wrap .container .firstPage header .signUp{
+        display: none;
+    }
+    .burger{
+        width: 45px;
+        height: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+    .burger__row{
+        width: 100%;
+        height: 5px;
+        border-radius: 10px;
+        background-color: $darkGreen;
+        border: 1px solid $darkGreen;
+        box-shadow: 0 10px 40px $darkGreen;
+    }
+    .wrap .container .firstPage main{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .wrap .container .firstPage main .main__right{
+        width: 100%;
+        justify-content: center;
+    }
+    .wrap .container .firstPage main .main__right img{
+        width: 450px;
+    }
+    .wrap .container .firstPage main .main__left h2{
+        font-size: 22px;
+        line-height: 29px;
+        width: 225px;
+        text-align: center;
+    }
+    h2{
+        font-size: 22px;
+    }
+    .wrap .container .firstPage main .main__left p{
+        text-align: center;
+    }
+    .wrap .container .firstPage main .main__left{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    // first page end 
+    // second page 
+    .wrap .container .secondPage{
+        padding: 100px 20px 40px 20px;
+    }
+    .wrap .container .secondPage .main .main__top{
+        display: flex;
+        flex-direction: column;
+        padding-top: 40px;
+    }
+    .wrap .container .secondPage .main .main__top .designImage{
+        width: 100%;
+    }
+    .wrap .container .secondPage .main .main__top .desineText{
+        width: 100%;
+        padding: 0;
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 0px;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+    .wrap .container .secondPage .main .main__top .desineText p:nth-child(1){
+        text-align: center;
+    }
+    .wrap .container .secondPage .main .main__top .desineText p:nth-child(2){
+        text-align: center;
+    }
+    .wrap .container .secondPage .main .main__top .designImage{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        border-radius: 0px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+    .wrap .container .secondPage .main .main__top .designImage .playButton-shaddow{
+        left: 0;
+        top: 40px;
+    }
+    .wrap .container .secondPage .main .mainBottom{
+        flex-direction: column;
+        align-items: center;
+    }
+    .wrap .container .secondPage .main .mainBottom .mainBottom__left{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .wrap .container .secondPage .main .mainBottom .mainBottom__right{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+    }
+    .wrap .container .secondPage .main .mainBottom .mainBottom__right h3{
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+    }
+    .wrap .container .secondPage .main .mainBottom .mainBottom__right p{
+        margin-top: 22px;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+    }
+    .wrap .container .secondPage .main .mainBottom .mainBottom__left img{
+        width: 500px;
+    }
+    // second page 
+    // thirdPage 
+    .wrap .container .thirdPage .main{
+        flex-direction: column;
+        align-items: center;
+    }
+    .wrap .container .thirdPage .main .projectsCard2{
+        display: block;
+    }
+    .wrap .container .thirdPage .main .displayNoneCard{
+        display: none;
+    }
+    .wrap .container .thirdPage .main{
+        margin-top: 12px;
+    }
+    .wrap .container .thirdPage{
+        padding: 60px 0;
+    }
+    .wrap .container .thirdPage .main .projectsCard{
+        margin: 20px 0;
+    }
+    .wrap .container .thirdPage .main .projectsCard h3{
+        font-size: 20px;
+    }
+    .wrap .container .thirdPage p{
+        font-size: 14px;
+        margin-top: 0px;
+    }
+    // third page
+    // fourth page
+    .wrap .container .fourthPage .main{
+        margin-top: 0;
+        width: 100%;
+        padding: 0 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    } 
+    .wrap .container .fourthPage .main img:nth-child(1){
+        width: 106.8px;
+        height: 106.8px;
+    }
+    .wrap .container .fourthPage .main img:nth-child(2){
+        width: 106.16px;
+        height: 40.32px;
+    }
+    .wrap .container .fourthPage .main img:nth-child(3){
+        width: 132.6px;
+        height: 20px;
+    }
+    .wrap .container .fourthPage .main img:nth-child(4){
+        width: 89.6px;
+        height: 58px;
+    }
+    .wrap .container .fourthPage .main img{
+        margin: 5px 10px;
+    }
+    .wrap .container .fourthPage h2{
+        margin-top: 0;
+    }
+    .wrap .container .fourthPage{
+        padding: 20px 0 50px 0;
+    }
+    .wrap .container .fourthPage .achievementCard{
+        padding: 0 20px;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    .wrap .container .fourthPage .achievementCard .achievementCard__right .achievementCard__text p{
+        font-size: 12px;
+        width: 370px;
+        line-height: 16px;
+        margin-top: 0px;
+        text-align: center;
+    }
+    .wrap .container .fourthPage .achievementCard .achievementCard__right .achievementCard__text h6{
+        font-size: 12px;
+        margin-top: 5px;
+    }
+    .wrap .container .fourthPage .achievementCard .achievementCard__right .achievementCard__text img{
+        right: 10px;
+        width: 30px;
+    }
+    .wrap .container .fourthPage .achievementCard .achievementCard__right{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 10px;
+        width: 100%;
+    }
+    .wrap .container .fourthPage .achievementCard .achievementCard__image{
+        width: 100%;
+        height: 200px;
+    }
+    .wrap .container .fourthPage .achievementCard .achievementCard__right .achievementCard__statistic p{
+        font-size: 14px;
+        margin-top: 2px;
+        text-align: center;
+        line-height: 18px;
+    }
+    .wrap .container .fourthPage .achievementCard .achievementCard__right .achievementCard__statistic{
+        width: 100%;
+        justify-content: center;
+        padding-top: 10px;
+    }
+    .wrap .container .fourthPage .achievementCard .achievementCard__right .achievementCard__statistic h3{
+        font-size: 24px;
+        text-align: center;
+    }
+    .wrap .container .fourthPage .achievementCard .achievementCard__right{
+        padding-left: 0;
+    }
+    // fourth page
+    // fifth page
+    .wrap .container .fifthPage .main{
+        padding: 0 20px;
+    }
+    .wrap .container .fifthPage{
+        padding: 0px 0 100px 0;
+    }
+    //fifth page
+}
+@media screen and (max-width:560px){
+    .wrap .container .secondPage .main .mainBottom .mainBottom__left img{
+        width: 100%;
+    }
+}
+@media screen and (max-width:530px){
+    // first page start 
+    .wrap .container .firstPage main .main__right img{
+        width: 350px;
+    }
+    .wrap .container .secondPage .main .mainBottom{
+        margin-top: 50px;
+    }
+    // first page end 
+    //fifth page
+    .wrap .container .fifthPage .main .main__right .sendMessage .send__button-block .send__button{
+        width: 130px;
+        height: 45px;
+        border-radius: 10px;
+        font-size: 15px;
+        font-weight: 500;
+        border-bottom-left-radius: 1px;
+    }
+    //fifth page
+}
+@media screen and (max-width:440px){
+    // fourth page
+    .wrap .container .fourthPage .achievementCard .achievementCard__right .achievementCard__statistic .achievementCard__statistic-centerbox{
+        margin: 0px;
+    }
+    .wrap .container .fourthPage .achievementCard .achievementCard__right .achievementCard__statistic{
+        justify-content: space-between;
+        padding: 0 20px;
+        padding-top: 5px;
+    }
+    .wrap .container .fourthPage .achievementCard .achievementCard__right .achievementCard__text p{
+        width: 90%;
+    }
+    .wrap .container .fourthPage .achievementCard .achievementCard__right .achievementCard__text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .wrap .container .fourthPage .achievementCard .achievementCard__right .achievementCard__text img{
+        right: 40%;
+        top: 15px;
+    }
+    .wrap .container .fourthPage .achievementCard .achievementCard__right .achievementCard__statistic h3{
+        font-size: 20px;
+    }
+    .wrap .container .fourthPage .achievementCard .achievementCard__right .achievementCard__statistic p{
+        font-size: 13px;
+    }
+    // fourth page
+}
+@media screen and (max-width:420px){
+    // first page start
+    .wrap .container .firstPage main .main__right img{
+        width: 300px;
+    }
+    .wrap .container .firstPage main .main__left h2{
+        font-size: 20px;
+        width: 193px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    .wrap .container .thirdPage .main{
+        padding: 0 20px;
+    }
+    .wrap .container .thirdPage .main .projectsCard{
+        width: 100%;
+    }
+    // first page end
+}
+@media screen and (max-width:396px){
+    .wrap .container .secondPage .main .mainBottom .mainBottom__right h3{
+        font-size: 18px;
+        line-height: 26px;
+        text-align: center;
+        display: none;
+    }
+    .wrap .container .secondPage .main .mainBottom .mainBottom__right p{
+        margin-top: 16px;
+        font-size: 12px;
+        line-height: 20px;
+        text-align: center;
+        display: none;
+    }
+    .wrap .container .secondPage .main .mainBottom .mainBottom__right .display__nonetext{
+        display: block;
+    }
+}
+@media screen and (max-width:377px){
+    // first page start 
+    .wrap .container .firstPage main .main__left p{
+        width: 100%;
+    }
+    // first page end
+}
+@media screen and (max-width:355px){
+    // first page start
+    .wrap .container .firstPage main .main__right img{
+        width: 250px;
+    }
+    // first page end
+}
